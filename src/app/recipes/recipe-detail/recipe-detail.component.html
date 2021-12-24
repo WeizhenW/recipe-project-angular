@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-md-12">
-        <img src="{{recipeSelected.imagePath}}" alt="{{recipeSelected.name}}" class="img-responsive">
+        <img src="{{recipeSelected.imagePath}}" alt="{{recipeSelected.name}}"
+            class="img-responsive">
     </div>
 </div>
 <div class="row">
@@ -10,14 +11,16 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <button class="btn btn-primary dropdown-toggle">
-            Manage Recipe <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Add Ingredient</a></li>
-            <li class="dropdown-item"><a href="#">Edit Recipe</a></li>
-            <li class="dropdown-item"><a href="#">Remove Recipe</a></li>
-        </ul>
+        <div class="dropdown">
+            <button appDropdownDirective class="btn btn-secondary dropdown-toggle" type="button">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Add Ingredient</a></li>
+                <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
+                <li><a class="dropdown-item" href="#">Remove Recipe</a></li>
+            </ul>
+        </div>
     </div>
 </div>
 <div class="row">
