@@ -2,18 +2,20 @@
     <a href="#" class="navbar-brand">Recipe Book</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link" href="#"
-                    (click)="onClickHeader('Recipe')">Recipes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"
-                    (click)="onClickHeader('Shopping')">Shopping List</a></li>
+            <li class="nav-item" routerLinkActive="active"><a class="nav-link"
+                    routerLink="/recipes">Recipes</a></li>
+            <li class="nav-item" routerLinkActive="active"><a class="nav-link"
+                    [routerLink]="['/shopping-list']">Shopping
+                    List</a></li>
         </ul>
         <ul class="nav navbar-nav dropdown navbar-right">
-            <button appDropdownDirective class="nav-link dropdown-toggle" href="#" id="navbarDropdown">
+            <button appDropdownDirective class="nav-link dropdown-toggle" style="cursor: pointer"
+                id="navbarDropdown">
                 Manage<span class="caret"></span>
             </button>
             <div appDropdownDirective class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Save</a>
-                <a class="dropdown-item" href="#">Fetch</a>
+                <a class="dropdown-item" style="cursor: pointer">Save</a>
+                <a class="dropdown-item" style="cursor: pointer">Fetch</a>
             </div>
         </ul>
     </div>
