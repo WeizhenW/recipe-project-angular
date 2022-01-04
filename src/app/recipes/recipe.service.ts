@@ -35,4 +35,19 @@ export class RecipeService {
         return this.recipesList.find(recipe => recipe.name === recipeName);
     }
 
+    addRecipe(recipe: Recipe) {
+        this.recipesList.push(recipe);
+    }
+
+    updateRecipe(recipe: Recipe) {
+        const name = recipe.name;
+        const index = this.recipesList.findIndex(recipe => recipe.name===name);
+        this.recipesList[index]=recipe;
+    }
+
+    deleteRecipe(recipe: Recipe) {
+        const index = this.recipesList.findIndex(r => r.name === recipe.name);
+        this.recipesList.splice(index,1);
+    }
+
 }
